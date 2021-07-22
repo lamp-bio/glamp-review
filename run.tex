@@ -1,0 +1,49 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%        01                  Initialize                                      %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{src/gen/class}
+\input{src/gen/goto}
+\input{\gen/mark}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%        02                  Bootstrapping  Utils                            %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{\gen/color}
+\input{\gen/input}
+\input{\gen/link}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%        03                  Load General TeX                                %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{\gen/box}
+\input{\gen/boxv2}
+\input{\gen/figure}
+\input{\gen/list}
+\input{\gen/table}
+\input{\gen/calc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%        04                  Load Development TeX                            %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%        fill                Add ways to populate builds with filler.
+%%        figs                Gather and render all figures for edits.
+
+\input{\dev/fill}
+%%  \input{\dev/figs}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%        05                  Load Content & Build                            %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+    \foreach \i in \txtA {\input{\i}}
+    \foreach \i in \txtB {\input{\i}}
+    \foreach \i in \txtC {\input{\i}}
+    \foreach \i in \txtD {\input{\i}}
+    \bibliographystyle{src/opt/cls/cite}
+    \bibliography{mnt/bib/lamp-reader-app,mnt/bib/bst-polymerase-biology,mnt/bib/lamp-on-paper}
+\end{document}

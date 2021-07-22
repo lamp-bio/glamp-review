@@ -25,6 +25,27 @@
     └── tmp
 ```
 
+## Details
+
+- `etc`
+- `mnt`
+- `src`
+    + `dev`
+    + `gen`
+    + `opt`
+        * `cls` holds the documentclass styles and citation styles.
+        * `sty` holds other layout-related material.
+            * `abbrev.tex`
+                * Normalizes the input of common abbreviations, for consistency.
+            * `chem.tex`
+                1. Provides proper rendering of certain terms, like divalent cations in LAMP.
+                2. Will interact with `substances` db built from the glossary and index.
+            * `siunit.tex`
+                * Normalizes the input and render of scientific units.
+            * `glamp-menlolike.toml`
+                * Build configuration file for a font system.
+
+
 ## A la Carte Export
 
 - Most elements can only be abstracted out for isolated export to a certain extent.
