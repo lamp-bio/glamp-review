@@ -1,0 +1,94 @@
+\section{Regulatory Landscape}
+    \label{sec:regs}
+
+    \subsection{Background}
+    
+        Regulatory and statutory considerations shape the landscape of clinical diagnostic research, development and deployment. For first-time applicants seeking to advance their test into clinical use, it is easy to become mired in doubts and misinformation. Regulatory affairs need not be such a quagmire.
+
+        We provide this overview as a partial sketch for those new to clinical regulations. In the service of accuracy and brevity, we first address high-level considerations in two major markets: the US and the EU. We then highlight recent, germane changes in both markets, including FDA Emergency Use Authorizations (EUAs) in the U.S. and the upcoming \emph{In-Vitro} Diagnostic Regulation (IVDR) in the E.U.
+
+        As this presentation suggests, regulations of direct relevance to diagnostic test developers vary across both time and geography — often substantially. It is therefore essential that diagnosticians be aware of local statutes when entering clinical development. While we cannot cover every major regulatory regime here, we are mindful that this treatment leaves undiscussed the mosaic of regulations governing the majority of the world’s population, such as the ASEAN Medical Device Directive.\cite{PacificBridge2018}
+
+    \subsection{US Regulatory Perspective}
+
+        \subsubsection{Background}
+
+            In the United States, most federal health regulations are the purview of agencies organized under the Department of Health and Human Services (HHS), such as the Centers for Disease Control and Prevention (CDC) and the Food and Drug Administration (FDA). It is the latter agency, the FDA, which is responsible for drug and medical device approvals. Therefore, the FDA has been the primary regulator of COVID-19 diagnostic tests.
+
+            Given the immediacy and severity of the emerging COVID-19 pandemic, as well as the large volume of new laboratory tests requiring regulatory approval, the FDA activated its Emergency Use Authorization (EUA) process, enabling accelerated medical device approval.\cite{Dong2020,Hasell2020} To expedite approval of the growing number of EUA applications, the FDA further sought to standardize and clarify a streamlined process with a series of official templates, issued over a 6 month period in 2020.
+
+            \input{\env/fda-templates}
+
+            However, since the first major guidance in May 2020, achieving FDA approval has been a moving target, owing to the interplay of three elements. First and foremost of these have been significant revisions from the FDA itself.\cite{FDAEUA2021} Next, one of the FDA’s sister agencies, the Centers for Medicare \& Medicaid Services (CMS), which is responsible for administering CLIA standards, answered an open question regarding surveillance testing and reporting requirements, and in doing so greatly reducing many test developers’ need to pursue FDA approval. Finally, the Office of the HHS Secretary issued a memo imposing limits on the scope of FDA EUA requirements for a subset of tests (LDTs), citing the agency’s lack of regulatory authority over those tests.
+
+            Thus it is most accurate to state that there are four  primary regulatory pathways for COVID-19 testing in the United States, differing largely with respect to the primary supervisory body and the degree of oversight.
+
+            \input{\env/us-regulatory-pathways}
+
+        \subsubsection{FDA Emergency Use Authorizations (EUAs)}
+
+            EUAs granted by the FDA comprise the (time-bound) regulatory approval for the vast majority of tests for COVID-19. EUAs are issued under a more streamlined process compared to conventional approvals of \emph{in-vitro} diagnostic (IVD) tests. This extends beyond an accelerated review timeline to simplified preparation of the submission itself. For instance, tests submitted for EUA approval have reduced reagent and clinical validation requirements: research-use only (RUO) reagents may be substituted for GMP/ISO grade, while validation studies may report n=30 positives, 30 negatives.
+
+            Individual EUAs for molecular SARS-CoV-2 tests are classified either as IVDs or LDTs. LDTs are a specially-designated subset of IVDs whose production and distribution is limited to a single laboratory, in full compatibility with overlapping CLIA requirements. IVDs without this designation can be sold and used by other laboratories.
+
+            The first EUA issued to Atila Biosystems was for a direct swab-based fluorescent LAMP test, followed soon thereafter by a CRISPR-based assay from Sherlock Biosciences. Color Genomics received approval for a 96-well colorimetric LAMP using commercial lysis/inactivation and bead purification reagents. Pro-Lab Diagnostics claims a LoD of 125 genome equivalents per flocked swab (using gamma irradiated virus) in their nasal swab test. Using extraction-based or extraction-free (‘direct’) protocols, Pro-Lab paired their test with Optigene's GenieHT fluorescence reader to enable melting curve analysis, requiring amplicons to melt within a specific narrow range (\qtyrange{83}{85}{\degC}).
+
+            Precise measurement of LoD and its clinical significance (What LoD is required for a specific use) has been a matter of both confusion and discussion. Viral loads~\cite{Woefel2020a,Woefel2020b} typically rise quickly and spike over a day or two and decay more slowly thereafter.\cite{Larremore2020} The infectiousness threshold for replication-competent virus is on the order of 1000 copies/µL of the patient sample.\cite{Pan2020}, very significantly above the LoD for most RT-LAMP tests and far above the analytical LoD of RT-PCR (single digit copies / \ul). Thus, moderate sensitivity tests such as RT-LAMP can detect the vast majority of COVID-19 patients capable of spreading the virus, especially if used frequently and with rapid turnaround times. The question of what constitutes fit-for-purpose analytical sensitivity for clinical practice remains a matter of debate (see Section 9).
+
+            To add further complexity, three rounds of reference data from the FDA for approved (mostly RT-PCR, some RT-LAMP) molecular diagnostic tests varies by 4 orders of magnitude between tests.\cite{MacKay2020} Furthermore, many flagship tests had FDA-reported LoDs 20-50 fold higher than those self-reported by the manufacturers themselves.\cite{FDAEUA2020}Note: See supplementary table of these data for readers’ convenience. Access to reference materials (one heat-inactivated virus and four blinded controls) is only available to EUA recipients. Wider access for developers would greatly improve objectivity and might accelerate the validation process.
+
+        \subsubsection{CLIA and Lab Developed Tests (LDTs)}
+
+            "The Clinical Laboratory Improvement Amendments of 1988 (CLIA) regulations include federal standards applicable to all U.S. facilities or sites that test human specimens for health assessment or to diagnose, prevent, or treat disease."~\cite{CDCCLIA}
+
+            Such CLIA-approved laboratories test using either approved commercial tests or LDTs that they develop themselves and receive FDA approval for (“home brew” or “in-house” tests). The FDA’s relationship to regulating LDTs is complex and evolved during the pandemic. Under normal circumstances, CLIA approved laboratories can develop LDTs that are limited to use in their specific laboratory but consequently require more limited analytical validation data sets. Once the COVID-19 Emergency Declaration by the HHS went into effect, and despite some equivocation between the HHS and FDA, in November 2020 CLIA labs were finally required to submit EUA for their LDTs, enabling both liability protection (under the PREP Act) and reimbursement (under the FFCRA). With a shift at the end of 2020 towards tests that increase accessibility (e.g. point of care tests) and capacity (high volume tests), it appears no further LDT EUAs were granted.
+
+        \subsubsection{State Authorization}
+
+            Clark summarizes:\cite{Clark2020}
+
+            In early March 2020, the FDA issued an enforcement discretion, in response to a request from the Wadsworth Center in the New York State Department of Health, in which it did not object to the center reviewing validation test reports from local labs that held a laboratory permit from the state health department.\cite{FDA20200313} An ensuing Presidential Memorandum expanded this enforcement discretion to state authorities to approve use of diagnostic tests.\cite{Trump2020} This means that a state or territory may choose to authorize CLIA-certified laboratories within that state to develop and use COVID-19 diagnostics under a review process developed by the state. FDA will not review the validation data or have direct oversight of the processes the states implement. However, the agency recommends that:
+            \input{\env/us-state-authorization}
+
+        \subsubsection{Institutional Review Boards (IRBs)}
+
+            IRBs are formally designated groups that review and monitor clinical research involving human subjects. The purpose of the IRB’s review is to assure, both in advance and by periodic assessment, that appropriate steps are taken to protect the rights and welfare of humans participating in the research. To accomplish this purpose, IRBs use a group process to review research protocols and related materials, such as informed consent documents.
+
+            When any researcher is planning to gather personal data and samples from research participants to validate a lab test, e.g. against a reference like RT-PCR, the experimenter must submit planned study protocol and consent forms to an IRB at their own institution. Virtually all research universities, and many commercial organizations, have dedicated in-house IRBs.\cite{CIRCARE2021} Regulation of IRB functions falls to two HHS agencies: the Office for Human Research Protections (OHRP) and the FDA. The OHRP maintains FAQs and a searchable database of IRB-related information.\cite{OHRP2016}
+
+        \subsubsection{Surveillance and Asymptomatic Testing}
+
+            While the regulated pathways of COVID-19 testing have understandably received most attention, a separate pathway has opened up that is not subject to the same regulatory controls. "Surveillance" testing is primarily used to gain information at a population level, rather than an individual level. It may involve random sampling of a specific population, for example to monitor disease prevalence and determine the population-level effect of community interventions such as social distancing. Prompted by a case involving the Gates Foundation in July/August 2020, the FDA confirmed that if the result of surveillance testing is purely to suggest to an individual that they go for a confirmatory test in a CLIA-certified laboratory, then the surveillance testing itself is not regulated by the CMS or the FDA. In contrast, returning results from tests on asymptomatic people using a CLIA-certified laboratory is regulated by the FDA.
+
+            By all appearances, this pathway, commonly associated with screening of university staff and students, is a popular one. However, it is difficult to quantify the extent of such testing in the absence of comprehensive tracking data for unregulated testing modalities. A subset of the authors are actively engaging in a working group to explore the potential of expanding this type of RT-LAMP surveillance testing, both in the US and abroad.
+
+            As vaccine rollout continues, US COVID-19 testing is projected to remain elevated for much of 2021-2022. With the rise of new variants, that demand may well remain for years beyond. While the ultimate role that LAMP tests will play in meeting that demand remains to be seen, continued progress on both the regulatory and commercial fronts will certainly help realize the immense potential of this important and flexible molecular detection technology.
+
+    \subsection{EU Regulatory Perspective}
+
+        \subsubsection{\emph{In-Vitro} Diagnostic Medical Device Directive (MDD)}
+
+            Tests for SARS-CoV-2 are classified as \emph{in-vitro} diagnostic medical devices (IVDs) and must be CE marked in accordance with the In-Vitro Diagnostic Medical Devices Directive IVDD; 98/79/EC before being placed on the market in Europe. CE marking is an administrative marking that indicates conformity with health, safety, and environmental protection standards for products sold within the European Economic Area (EEA) and that it may be legally sold within the EEA. It is \textbf{not} a quality indicator or a certification mark.
+
+            There is no central approval system for \emph{in-vitro} diagnostic medical devices in the EU. For SARS-CoV-2 diagnostics designed for professional use (General IVDs), manufacturers self certify that their test meets the requirements of the IVD Directive. Manufacturers are required to provide a certificate of conformity and a technical file including the intended use, a risk assessment and the route by which they claim to be in conformity with the Medical Device Directive. The file may also contain a Clinical Evidence Report with sensitivity and specificity claims etc. This pathway can be complex and Byzantine given the different regulatory standards and classes of testing devices involved. 
+
+            The IVD Directive specifies that devices must be designed and manufactured in such a way that they are \emph{suitable for the intended purpose} specified by the manufacturer, taking account of the generally acknowledged state of the art. They must achieve the relevant performance, in particular in terms of analytical sensitivity, diagnostic sensitivity, analytical specificity, diagnostic specificity, accuracy, repeatability, reproducibility, including control of known relevant interference, and limits of detection, stated by the manufacturer. The test must be registered with the competent authority in the country where they are legally based. A competent authority in the context of IVDs is likely to be a given nation's body with authority to ensure that the requirements of the IVDD are fulfilled in that member state. For COVID-19 devices that are designed for use by lay persons (self-tests), the manufacturer must also apply to a third party body called a notified body who will do additional verification and issue a certificate.
+
+        \subsubsection{In-house or Lab Developed Tests}
+
+            ISO15189 is a primary standard, somewhat analogous to US CLIA laboratory standards, which medical laboratories in Europe must follow if they wish to perform clinical testing. These certifications may be held concurrently in the US.\cite{Schneier2017} Usually, clinical testing laboratories purchase \emph{in-vitro} diagnostic medical devices (IVDs) from market suppliers. However, when pandemic-driven demand for certain IVD products outstrips market supplies of those products, such health institute laboratories may work to develop their own ‘in-house’ or lab developed tests (LDTs). IVD tests, so developed, are not considered to be placed on the market or put into service and are thus exempt from the requirements of Directive 98/79/EC.
+
+            Included under this in-house exemption:
+            \input{\env/eu-ldt-exemption}
+
+            If these in-house manufactured IVDs are transferred to another laboratory and that laboratory is outside the health institution’s single legal entity, they are then within the scope of the IVD directive and therefore must be CE marked.  In this scenario, the originating health institution is considered the legal manufacturer of the device.\cite{Nolan2020}
+
+        \subsubsection{Upcoming \emph{In-Vitro} Diagnostic Regulation (IVDR) 2022}
+
+            The regulatory landscape described above is changing with the full implementation of the new In-Vitro Diagnostic Regulation (IVDR) (EU) 2017/746 as of 26 May 2022.\cite{EU2017} Regulations are being notably tightened. After this date, most general category IVDs will be reclassified and can no longer be self-certified, including those already on the market. This will increase the percentage of IVDs requiring CE marks from \qty{20}{\percent} currently under the IVD Directive to \qty{80}{\percent} under the IVDR.\cite{Vollebregt2016} In addition, all in-house IVDs such as lab developed tests will be regulated, including those currently exempt from IVDD. There will be few, limited exemptions if an equivalent device available on the market cannot already meet clinical needs at the appropriate level of performance, but this scenario will only apply to a very small proportion of LDTs.
+
+            Any SARS-CoV-2 IVD intended for use in the EU or on samples originating in the EU will be required to comply with IVDR, even if the lab performing the test is based elsewhere. Therefore, manufacturers and clinical labs should start preparing for the relevant regulatory submissions with all new tests.
+
+        \subsubsection{National derogation strategies}
+
+            Exceptionally, in the interest of protection of health, the Directive states that a Member State may, in response to a duly justified request, authorize the placing on the market within its territory of individual devices for which the applicable conformity assessment procedures have not yet been carried out, e.g. pending the completion of the device’s evaluation. In adopting such national derogations, the national competent authority of the Member State must carefully consider any risk against the benefit of having the device available for immediate use. The national processes for adopting these derogations vary across Member States.\cite{EC2020}

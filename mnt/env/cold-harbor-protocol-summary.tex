@@ -1,0 +1,20 @@
+\begin{enumerate}
+    \item Heat inactivation of saliva samples and Proteinase K treatment.
+    \item \qty{4}{\uL} of the sample is used per LAMP reaction in a total reaction volume of \qty{20}{\uL}.
+    \item Assay runtime of \qtyproduct{99 x 30}{\second} cycles at \qty{65}{\degC}.
+    \begin{enumerate}
+        \item Baseline detection: between cycles \numrange{5}{15}
+        \item The fluorescent threshold is instrument-dependent.
+        \item However, the control fluorescence intensity should not cross the threshold during the entire protocol.
+        \item Example: ABI7300: \num[print-unity-mantissa=true]{1e6}
+    \end{enumerate}
+    \item We group $C_t$ values into three categories.
+    \begin{enumerate}
+        \item $C_t < 80$: positive;
+        \item $80 < C_t < 90$: inconclusive, meriting a repeat test;
+        \item $C_t > 90$: negative.
+    \end{enumerate}
+    \item Most positives are expected to amplify within \qty{20}{\minute}, \ie $C_t < 40$.
+    \item Cutoffs can be adjusted more stringently upon need and cycler.
+    \item The cost/reaction is \numrange{1.50}{2.00} USD, using reagents purchased in the USA.
+\end{enumerate}

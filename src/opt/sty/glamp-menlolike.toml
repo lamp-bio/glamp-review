@@ -1,0 +1,11 @@
+[buildPlans.glamp-menlolike]
+family      = "gLAMP Menlo-like"
+spacing     = "normal"
+serifs      = "sans"
+no-cv-ss    = true
+
+  [buildPlans.glamp-menlolike.variants]
+  inherits  = "ss04"
+
+  [buildPlans.glamp-menlolike.ligations]
+  inherits  = "dlig"

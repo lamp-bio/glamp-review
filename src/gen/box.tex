@@ -1,0 +1,72 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                  Layout                        Boxes                       %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%    README        tcolorbox provides an environment for boxes. These boxes can
+%%                  be colored and framed in various ways, as well as containing
+%%                  header lines. A box can be split into upper and lower parts.
+%%
+%%    DEVTOOL       tcolorbox can render side-by-sides of TeX source and output.
+%%                  One part of the box displays source and output respectively.
+%%
+%%    STYLES        tcolorbox has many style parameters for custom box elements.
+%%                  We are keeping our boxes simple as a matter of practicality.
+%%                  Styles must be able to translate between publishing systems.
+%%
+%%                  Therefore our elements are simple rectangles with perimeters
+%%                  defined by a stroke in one of tcolorbox's library of default
+%%                  colors. They have a fill color derived from the this accent,
+%%                  but lightened for readability of text contents. Finally, the
+%%                  header line has a bolded set phrase denoting the type of box
+%%                  in use, such as a Hint, Note, or Warning. It is likely these
+%%                  will be swapped out for symbols, for a cleaner, better look.
+%%
+%%    ELEMENTS      As of writing, we have four box types:
+%%
+%%                                      ┌──────┬───────────┐
+%%                                      │ Key  │   Value   │
+%%                                      ├──────┼───────────┤
+%%                                      │ boxh │ hint box  │
+%%                                      │ boxi │ info box  │
+%%                                      │ boxn │ note box  │
+%%                                      │ bow  │ warn box  │
+%%                                      └──────┴───────────┘
+%%      tcolorbox       boxes           boxh,   boxn,   boxw
+%%      tcolorbox       funcs           hint,   note,   warn
+
+\usepackage[most]{tcolorbox}
+\tcbset{textmarker/.style={%
+                             enhanced,
+                             parbox     =false,
+                             boxrule    =  0mm,
+                             boxsep     =  0mm,
+                             arc        =  0mm,
+                             outer arc  =  0mm,
+                             left       =  5mm,
+                             right      =  3mm,
+                             top        =  7pt,
+                             bottom     =  7pt,
+                             toptitle   =  1mm,
+                             bottomtitle=  1mm,
+                             oversize        }}
+
+\newtcolorbox{boxh}{    textmarker,
+                        borderline west =  {6pt}{0pt}{yellow},
+                        colback         =  yellow!10!white  }
+
+\newtcolorbox{boxi}{    textmarker,
+                        borderline west =  {6pt}{0pt}{brightcerulean},
+                        colback         =  brightcerulean!10!white   }
+
+\newtcolorbox{boxn}{    textmarker,
+                        borderline west =  {6pt}{0pt}{green},
+                        colback         =  green!10!white   }
+
+\newtcolorbox{boxw}{    textmarker,
+                        borderline west =  {6pt}{0pt}{red},
+                        colback         =  red!10!white   }
+
+\newcommand{\info}[1]{\begin{boxi}\textbf{Info:} #1\end{boxi}}
+\newcommand{\note}[1]{\begin{boxn}\textbf{Note:} #1\end{boxn}}
+\newcommand{\hint}[1]{\begin{boxh}\textbf{Hint:} #1\end{boxh}}
+\newcommand{\warn}[1]{\begin{boxw}\textbf{Warn:} #1\end{boxw}}

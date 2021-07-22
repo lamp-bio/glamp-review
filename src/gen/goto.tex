@@ -1,0 +1,42 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                  Utilities                     Traversal                   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{pgffor}
+\usepackage{xparse}
+\usepackage{listofitems}
+
+\newcommand{\pwd}{.}
+          \newcommand{\etc}{\pwd/etc}
+                    \newcommand{\job}{\etc/job}
+                    \newcommand{\srv}{\etc/srv}
+                              \newcommand{\doc}{\srv/doc}
+                              \newcommand{\pub}{\srv/pub}
+                              \newcommand{\web}{\srv/web}
+          \newcommand{\mnt}{\pwd/mnt}
+                    \newcommand{\bib}{\mnt/bib}
+                    \newcommand{\env}{\mnt/env}
+                    \newcommand{\fig}{\mnt/fig}
+                    \newcommand{\gls}{\mnt/gls}
+                    \newcommand{\nfo}{\mnt/nfo}
+                    \newcommand{\txt}{\mnt/txt}
+          \newcommand{\src}{\pwd/src}
+                    \newcommand{\bin}{\src/bin}
+                    \newcommand{\dev}{\src/dev}
+                    \newcommand{\gen}{\src/gen}
+                    \newcommand{\lib}{\src/lib}
+                    \newcommand{\opt}{\src/opt}
+                              \newcommand{\art}{\opt/art}
+                              \newcommand{\cls}{\opt/cls}
+                              \newcommand{\sty}{\opt/sty}
+          \newcommand{\var}{\pwd/var}
+
+\newcommand*{\txtA}{\txt/00,\txt/01,\txt/02}
+\newcommand*{\txtB}{\txt/03,\txt/04,\txt/05,\txt/06,\txt/07,\txt/08,\txt/09}
+\newcommand*{\txtC}{\txt/10}
+\newcommand*{\txtD}{\txt/11}
+
+\newcommand*{\runB}{\gen/color,\gen/input,\gen/link,\gen/table}
+\newcommand*{\runC}{\gen/box,\gen/boxv2,\gen/calc,\gen/figure,\gen/list}
+\newcommand*{\runD}{\dev/devfig,\dev/devfill}
+

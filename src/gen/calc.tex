@@ -1,0 +1,40 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                             Standard  Counters                             %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{titlesec}
+\usepackage{chngcntr}
+\usepackage{fmtcount}
+
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+%%%%    \renewcommand{\thesection}{\padzeroes[2]\decimal{section}}
+
+
+\makeatletter
+
+\newcommand\subsubsubsection{\@startsection{paragraph}{4}{\z@}{-2.5ex\@plus -1ex \@minus -.25ex}{1.25ex \@plus .25ex}{\normalfont\normalsize\bfseries}}
+\newcommand\subsubsubsubsection{\@startsection{subparagraph}{5}{\z@}{-2.5ex\@plus -1ex \@minus -.25ex}{1.25ex \@plus .25ex}{\normalfont\normalsize\bfseries}}
+
+\renewcommand{\thesection}{\two@digits{\value{section}}}
+\renewcommand{\thesubsection}{\thesection.0\decimal{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.0\decimal{subsubsection}}
+\renewcommand{\theparagraph}{\thesubsubsection.0\decimal{paragraph}}
+\newcommand{\thesubsubsubsection}{\theparagraph}
+
+\renewcommand\thefigure{\thesubsection\Alph{figure}}
+\renewcommand\thetable{\thesubsection\Alph{table}}
+
+\newcommand{\topictitle}[2]{\subsection[#1]{#1 \\ {\large #2}}}
+\titleformat{\subsubsection}{\bfseries}{\thesubsubsection}{1em}{}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                            Standard  Dimensions                            %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcolumntype{s}{>{\hsize=.25\hsize}X}
+\newcolumntype{m}{>{\hsize=.50\hsize}X}
+\newcolumntype{b}{>{\hsize=1.0\hsize}X}
+\newcolumntype{t}{>{\hsize=.10\hsize}X}

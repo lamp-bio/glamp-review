@@ -1,0 +1,19 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                  UNITS                         IONS                        %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\usepackage{chemmacros}
+%%\newcommand{\ion}[3]{\ce{#1^{#2#3}}}
+
+\usepackage[version=4]{mhchem}
+\newcommand{\ion}[3]{\ce{{#1}^{#2#3}}}
+
+\begin{comment}
+
+    \usepackage{chemmacros}                     %%  ion (v1)
+    \usepackage{mhchem}                         %%  ion (v2)
+
+    \newcommand{\ion}[3]{\ce{#1^{#2#3}}}        %%  \ion{elem}{val}{polarity}
+    \newcommand{\ion}[3]{\ch{{#1}^{#2#3}}}      %%  \ion{elem}{val}{polarity}
+
+\end{comment}

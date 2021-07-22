@@ -1,0 +1,75 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                  SIUNITX                       SETUP ARGS                  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{siunitx}
+    \sisetup{
+                    free-standing-units   =true,
+                %%  per-mode              =symbol,
+                    print-unity-mantissa  =false,
+                    range-phrase          ={--},
+                    range-units           =single
+            }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                  SIUNITX                       DATE TIME                   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%  Always ensure that durations don't repeat unit.
+\newcommand{\daterange}[3]{\qtyrange[range-units=single]{#1}{#2}{#3}}
+\newcommand{\timerange}[3]{\qtyrange[range-units=single]{#1}{#2}{#3}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                  SIUNITX                       TEMPERATURE                 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%  Shorten \degreeCelsius to \degC
+\DeclareSIUnit\degC{\degreeCelsius}
+
+%%  Always produce x-y °C, never x°C-y°C
+\newcommand{\temprange}[3]{\qtyrange[range-units=single]{#1}{#2}{#3}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                  SIUNITX                       VOLUME                      %%
+%%                                                CONCENTRATION               %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%  Introduce Molar unit while
+%%  adding shorthand for three
+%%  of the most common derived
+%%  units i.e. mM, uM, and nM.
+
+\DeclareSIUnit\mL{\milli\litre}
+\DeclareSIUnit\uL{\micro\litre}
+
+\DeclareSIUnit\molar{\mole\per\cubic\deci\metre}
+\DeclareSIUnit\Molar{\textsc{m}}
+
+\DeclareSIUnit\mM{\milli\Molar}
+\DeclareSIUnit\uM{\milli\Molar}
+\DeclareSIUnit\nM{\nano\Molar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                  SIUNITX                       CLINICAL                    %%
+%%                                                DIAGNOSTIC                  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\DeclareSIUnit\sample{sample}
+\DeclareSIUnit\copies{\text{copies}}
+\DeclareSIUnit\c{\text{copy}}
+
+\newcommand{\copiesrange}[3]{\numrange{#1}{#2} copies/#3}
+\newcommand{\copies}[2]{\num{#1} copies/#2}
+\newcommand{\copy}[2]{\num{#1} copy/#2}
+
+%% \newcommand{\cmL}{copies / \mL}
+%% \newcommand{\cuL}{copies / \uL}
+
+\begin{comment}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                  SIUNITX                       TABLE                       %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tablenum[opt]{num}
+\end{comment}
