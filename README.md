@@ -63,4 +63,16 @@ You'll get the builder's attempt to import
 - the figure's layout settings
 - any dependencies on other content, ex. bibliography entries
 
+## To Be 100% Clear:
 
+Jeremy doesn't expect anyone to touch any TeX etc.  
+He's building discrete exports of everything.
+
+## BioRender Figure Parameters
+
+- Biorender-produced figures are PDF. 300 ppi, 40 cm long edge — largest round size possible on export.
+- No PDF options are available in biorender, ex. nothing like PDF/A conformance. You get what you get.
+- I assume they at least do sufficient font subsetting for touchups to the text, but I haven't confirmed.
+- We also have the source imagery used for each biorender figure — none are dynamic or data-driven.
+- So you can rebuild variants more to your taste from those components, if need be.
+- Components are in `/mnt/fig/components`, unless they haven't been added yet.
